@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "SearchInput": "../../components/Searchinput/Searchinput",
+    "Tabs": "../../components/Tabs/Tabs"
+  },
+  "navigationBarTitleText": "商品列表",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 100,
+  "backgroundTextStyle": "dark",
+  "backgroundColor": "#EDEDED"
+}

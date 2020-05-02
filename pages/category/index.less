@@ -1,0 +1,60 @@
+.cates {
+  width: 100%;
+  height: 100vh;
+
+  .catesbox {
+    height: ~'calc( 100vh - 90rpx)';
+    display: flex;
+
+    .left_menu {
+      flex: 2;
+
+      .leftmenu_item {
+        width: 100%;
+        padding: 25rpx;
+        font-size: 30rpx;
+        text-align: center;
+      }
+
+      .active {
+        color: red;
+      }
+    }
+
+    .right_menu {
+      flex: 5;
+
+      .item_title {
+        width: 100%;
+        padding: 30rpx 20rpx 10rpx;
+        font-size: 32rpx;
+        text-align: center;
+        position: relative;
+
+        .title_line {
+          color: #ccc;
+        }
+      }
+
+      .item_cont {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        text-align: center;
+        font-size: 26rpx;
+
+        navigator {
+          width: 33.33%;
+          box-sizing: border-box;
+
+
+          image {
+            width: 100%;
+            height: 140rpx;
+            padding: 20rpx 20rpx 0;
+          }
+        }
+      }
+    }
+  }
+}

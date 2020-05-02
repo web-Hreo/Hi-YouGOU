@@ -1,0 +1,75 @@
+<view class="mycart">
+  <!-- 有数据的时候显示 -->
+  <view class="HaveGoods" wx:if="{{pageFlag}}">
+    <!-- 商品列表 -->
+    <view class="goods_list">
+      <view class="list_item" wx:for="{{cart}}" wx:key="goods_id">
+        <view class="item_checkbox" bindtap="Itemchange" data-id="{{item.goods_id}}">
+          <!-- <text class="iconfont icon-delete"></text>
+          <text class="iconfont icon-jia1"></text> -->
+          <text class="iconfont icon-xuanzhong" wx:if="{{item.checkboxFlage}}"></text>
+          <text class="iconfont icon-quan" wx:else></text>
+        </view>
+        <view class="item_img">
+          <image class="" src="{{item.goods_small_logo}}" lazy-load />
+        </view>
+        <view class="item_config">
+          <view class="config_top">
+            <view class="item_name">{{item.goods_name}}</view>
+            <view class="item_num">
+              <view class="item_lable">数量:</view>
+              <view class="item_num_delete" bindtap="changenum" data-config="{{-1}}" data-id="{{item.goods_id}}">
+                <text class="iconfont icon-delete" wx:if="{{item.num>1?false:true}}"></text>
+                <text class="iconfont icon-jian1" wx:else></text>
+              </view>
+              <view class="item_num_input">
+                <input class="" value="{{item.num}}" />
+              </view>
+              <view class="item_num_add" bindtap="changenum" data-config="{{1}}" data-id="{{item.goods_id}}">
+                <text class="iconfont icon-jia1"></text>
+              </view>
+            </view>
+          </view>
+          <view class="item_price">
+            <view class="price_price">￥{{item.goods_price}}</view>
+            <view class="price_delete" bindtap="handlerDeleteThisGoods" data-del="{{'this'}}" data-id="{{item.goods_id}}">
+              删除
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 底部结算框 -->
+    <view class="goods_settl" wx:if="{{pageFlag}}">
+      <view class="settl_left">
+        <view class="item_checkbox" bindtap="chanegFlage">
+          <text class="iconfont icon-xuanzhong" wx:if="{{checkAllFlage}}"></text>
+          <text class="iconfont icon-quan" wx:else></text>
+          <text>全选</text>
+        </view>
+        <view class="deleteALL" bindtap="handlerDeleteThisGoods" data-del="{{'all'}}">删除</view>
+      </view>
+      <view class="settl_right">
+        <view class="settl_total">
+          <text>合计:</text>
+          ￥{{totalprice}}
+        </view>
+        <view class="Settlement" bindtap="handlepay">去结算({{totalnum}})</view>
+      </view>
+    </view>
+  </view>
+  <!-- 没数据的时候显示 -->
+  <view class="NoGoods_cont" wx:else>
+    <view class="NoGoods">
+      <view class="cont_img">
+        <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1588191724695&di=f9a95c0ecf41957890b510c9a9363bda&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fe1b1467beea0a9c7d6a56b32bac6d7e5dcd914f7c3e6-YTwUd6_fw658" mode="widthFix" />
+      </view>
+      <view class="cont_P">购物车暂时没有商品</view>
+      <view class="cont_navigator" hover-class="none">
+        <navigator url="/pages/category/index" hover-class="navigator-hover" open-type="switchTab">
+          去逛逛
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>

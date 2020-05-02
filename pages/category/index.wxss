@@ -1,0 +1,49 @@
+.cates {
+  width: 100%;
+  height: 100vh;
+}
+.cates .catesbox {
+  height: calc( 100vh - 90rpx);
+  display: flex;
+}
+.cates .catesbox .left_menu {
+  flex: 2;
+}
+.cates .catesbox .left_menu .leftmenu_item {
+  width: 100%;
+  padding: 25rpx;
+  font-size: 30rpx;
+  text-align: center;
+}
+.cates .catesbox .left_menu .active {
+  color: red;
+}
+.cates .catesbox .right_menu {
+  flex: 5;
+}
+.cates .catesbox .right_menu .item_title {
+  width: 100%;
+  padding: 30rpx 20rpx 10rpx;
+  font-size: 32rpx;
+  text-align: center;
+  position: relative;
+}
+.cates .catesbox .right_menu .item_title .title_line {
+  color: #ccc;
+}
+.cates .catesbox .right_menu .item_cont {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  font-size: 26rpx;
+}
+.cates .catesbox .right_menu .item_cont navigator {
+  width: 33.33%;
+  box-sizing: border-box;
+}
+.cates .catesbox .right_menu .item_cont navigator image {
+  width: 100%;
+  height: 140rpx;
+  padding: 20rpx 20rpx 0;
+}

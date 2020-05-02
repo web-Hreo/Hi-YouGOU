@@ -1,0 +1,22 @@
+<view class="goods_list">
+  <!-- 搜索框 -->
+  <SearchInput></SearchInput>
+  <Tabs tabsList="{{tabs}}" bindtabindex="settabindex">
+    <block wx:if="{{tabs[0].isActive}}">
+      <view class="tabs_item" wx:for="{{goods_list}}" wx:for-index="index" wx:for-item="item" wx:key="goods_id">
+        <navigator url="/pages/goods_detail/index?goods_id={{item.goods_id}}" hover-class="navigator-hover" open-type="navigate">
+          <view class="tabs_item_img">
+            <!-- 为了对呀图片丢失 设置当图片为空时访问固定图片(丢失模式图片) -->
+            <image class="" src="{{item.goods_small_logo?item.goods_small_logo:'https://ww1.sinaimg.cn/large/007rAy9hgy1g24by9t530j30i20i2glm.jpg'}}" mode="widthFix" lazy-load />
+          </view>
+          <view class="tabs_item_config">
+            <view class="config_name">{{item.goods_name}}</view>
+            <view class="config_price">￥{{item.goods_price}}</view>
+          </view>
+        </navigator>
+      </view>
+    </block>
+    <block wx:elif="{{tabs[1].isActive}}">暂未开放销售选项~~</block>
+    <block wx:else="{{tabs[2].isActive}}">暂未开放价格选项~~</block>
+  </Tabs>
+</view>

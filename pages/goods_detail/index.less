@@ -1,0 +1,116 @@
+.goods_detail{
+  padding-bottom: 100rpx;
+  width: 100%;
+  swiper{
+    width: 100%;
+    height: 70vw;
+    text-align: center;
+    swiper-item{
+
+      image{
+        width: 100%;
+      }
+    }
+  }
+  .goods_config{
+    width: 100%;padding: 10rpx 20rpx;
+    .config_price{
+      padding-left: 15rpx;
+      color: red;
+      font-size: 36rpx;
+    }
+    .config_title{
+      font-size: 30rpx;
+      padding-top: 15rpx;
+      display: flex;
+      align-items: center;
+      
+      .config_name{
+        flex: 8;
+        text-overflow: -o-ellipsis-lastline;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+        text{
+          display:inline-block;
+          width: 80rpx;
+          height: 40rpx;
+          text-align: center;
+          border-radius: 10rpx;
+          color: #fff;
+          // padding: 2rxp 8rpx;
+          background-color: #00B26A;
+        }
+      }
+      .config_Collection{
+        flex: 2;
+        text-align: center;
+        border-left: 1px solid #c0c0c0;
+      }
+    }
+  }
+  .goods_info{
+    width: 100%;
+    .info_title{
+      font-size: 32rpx;
+      color: #00B26A;
+      font-weight: 600;
+      padding: 20rpx;
+    }
+  }
+  .btm_toolBox{
+    z-index: 99;
+    background-color: #fff;
+    border-top: 1rpx solid #c0c0c0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  .btm_tool{
+    display: flex;
+    align-items: center;
+    .tool_left{
+      width: 50%;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      .tool_item{
+        position: relative;
+        button{
+          position: absolute;
+          top: 0;left: 0;width: 100%;height: 100%;
+          opacity: 0;
+          z-index: 2;
+        }
+        text{
+          font-size: 30rpx;
+        }
+        width: 33.33%;
+        font-size: 26rpx;
+      }
+    }
+    .tool_right{
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      font-size: 32rpx;
+      color: #fff;
+      view{
+        width: 50%;
+        height: 100%;
+        line-height: 100rpx;
+        &:nth-child(1){
+          background-color: #FFA300;
+        }
+        &:nth-child(2){
+          background-color: #F5544C;
+        }
+      }
+    }
+  }
+}

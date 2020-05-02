@@ -1,0 +1,120 @@
+.user {
+  width: 100%;
+  background-color: #f3efef;
+  padding-bottom: 20rpx;
+  position: relative;
+}
+.user .user_head {
+  width: 100%;
+  height: 550rpx;
+  position: relative;
+  overflow: hidden;
+}
+.user .user_head .user_background {
+  width: 750rpx;
+  height: 550rpx;
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+}
+.user .user_head .user_portrait_cont {
+  width: 250rpx;
+  height: 200rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  position: absolute;
+  top: 200rpx;
+}
+.user .user_head .user_portrait_cont button {
+  width: 220rpx;
+  font-size: 28rpx;
+  margin: 65rpx 0;
+}
+.user .user_head .user_portrait_cont .user_name {
+  padding-top: 20rpx;
+  color: #fff;
+}
+.user .user_head .user_portrait_cont image {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+}
+.user .user_flex {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.user .item_radius {
+  background-color: #fff;
+  border-radius: 15rpx;
+  margin: 17rpx 15rpx;
+  padding: 15rpx;
+}
+.user .user_collection {
+  position: absolute;
+  top: 500rpx;
+  width: 722rpx;
+}
+.user .user_collection .user_collection_item {
+  flex: 1;
+}
+.user .user_collection .user_collection_item .user_collection_num {
+  color: #ff734c;
+  padding: 4rpx 0;
+}
+.user .user_collection .user_collection_item .user_collection_name {
+  color: #464545;
+  padding: 4rpx 0;
+}
+.user .user_order {
+  margin-top: 100rpx;
+}
+.user .user_order .order_titel {
+  font-size: 32rpx;
+  line-height: 70rpx;
+  border-bottom: 1px solid #e6e3e3;
+}
+.user .user_order .order_config_item {
+  flex: 1;
+}
+.user .user_order .order_config_item .order_config_icon {
+  color: #ff734c;
+  padding: 20rpx 0 10rpx 0;
+}
+.user .user_order .order_config_item .order_config_icon .iconfont {
+  font-size: 40rpx;
+}
+.user .user_order .order_config_item .order_config_name {
+  font-size: 28rpx;
+  padding: 4rpx 0;
+}
+.user .user_address {
+  justify-content: space-between;
+  font-size: 32rpx;
+}
+.user .user_Other {
+  font-size: 32rpx;
+}
+.user .user_Other .user_Other_item {
+  justify-content: space-between;
+  padding: 20rpx 0;
+  border-bottom: 1px solid #e6e3e3;
+}
+.user .user_Other .user_Other_item .user_Other_phone {
+  padding-right: 20rpx;
+  font-size: 26rpx;
+}
+.user .user_Other .user_Other_item:nth-child(1) {
+  padding-top: 0;
+}
+.user .user_Other .user_Other_item:nth-child(3) {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.user .user_admin,
+.user .user_outlogin {
+  background-color: #fff;
+  margin: 17rpx 0;
+  padding: 15rpx 27rpx;
+  justify-content: space-between;
+}

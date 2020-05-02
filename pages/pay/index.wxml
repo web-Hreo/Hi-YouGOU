@@ -1,0 +1,68 @@
+<view class="mycart">
+  <!-- 有数据的时候显示 -->
+  <view class="HaveGoods">
+    <!-- 收货地址 -->
+    <view class="goods_address" bindtap="chooseAddress">
+      <view class="address_add" wx:if="{{!address.nationalCode}}">
+        <view class="icon1">
+          <text class="iconfont icon-gantanhao" />
+        </view>
+        <view class="newaddress">请选择您的收货地址</view>
+        <view class="icon2">
+          <text class="iconfont icon-xiangyou" />
+        </view>
+      </view>
+      <view class="address_userress" wx:else>
+        <view class="icon1">
+          <text class="iconfont icon-dingwei" />
+        </view>
+        <view class="newaddress">
+          <view class="config">
+            <view class="config_name">{{address.userName}}</view>
+            <view class="config_phone">{{address.telNumber}}</view>
+          </view>
+          <view class="address">
+            {{address.provinceName}} 
+          {{address.cityName}} 
+          {{address.countyName}} 
+          {{address.detailInfo}}
+          </view>
+        </view>
+        <view class="icon2">
+          <text class="iconfont icon-xiangyou" />
+        </view>
+      </view>
+    </view>
+    <!-- 商品列表 -->
+    <view class="goods_list">
+      <view class="list_item" wx:for="{{cart}}" wx:key="goods_id">
+        <view class="item_img">
+          <image class="" src="{{item.goods_small_logo}}" lazy-load />
+        </view>
+        <view class="item_config">
+          <view class="config_top">
+            <view class="item_name">{{item.goods_name}}</view>
+            <view class="item_num">x{{item.num}}</view>
+          </view>
+          <view class="item_price">
+            <view class="price_price">￥{{item.goods_price}}.00</view>
+            <!-- <view class="price_delete">删除</view> -->
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 底部结算框 -->
+    <view class="goods_settl_cont" style="padding-bottom:{{Modelmes?'68rpx':'0'}}">
+      <view class="goods_settl">
+        <view class="settl_right">
+          <view class="settl_totalnum">共 {{totalnum}} 件</view>
+          <view class="settl_totalprice">
+            <text>合计:</text>
+            ￥{{totalprice}}
+          </view>
+          <view class="Settlement" bindtap="handlepay">提交订单</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

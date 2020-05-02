@@ -1,0 +1,21 @@
+@import "./styles//iconfont.wxss";
+
+/*微信小程序中不支持通配符*/
+page,
+view,
+text,
+image,
+swiper,
+swiper-item,
+navigator {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+page {
+  /*定义主题颜色*/
+  --themeColorL: #00B26A;
+  /*定义统一字体大小  默认使用375px的设计稿*/
+  font-size: 28rpx;
+}

@@ -1,0 +1,311 @@
+@color: #00B26A;
+@cartcolor: #ff734c;
+
+.mycart {
+  width: 750rpx;
+  min-height: 100vh;
+  background-color: #f3efef;
+  color: #000;
+.NoGoods_cont{
+  padding-top: -1vh;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  .NoGoods {
+    width: 100%;
+    top: 50%;
+    text-align: center;
+    position: absolute;
+    transform: translateY(-50%);
+
+    .cont_img {
+      width: 100%;
+
+      image {
+        width: 300rpx;
+        height: 230rpx;
+      }
+    }
+
+    .cont_P {
+      padding: 40rpx 0 20rpx 0;
+      font-size: 34rpx;
+    }
+
+    .cont_navigator {
+      width: 230rpx;
+      height: 60rpx;
+      text-align: center;
+      line-height: 60rpx;
+      color: #fff;
+      margin: 0 auto;
+      background-color: @color;
+      border-radius: 40rpx;
+    }
+  }
+}
+
+  .HaveGoods {
+    width: 750rpx;
+    font-size: 30rpx;
+    padding-top: 1vh;
+
+    .goods_address {
+      border-bottom: 1px solid #c0c0c0;
+
+      .address_add,
+      .address_userress {
+        height: 120rpx;
+        display: flex;
+        align-items: center;
+      }
+
+      .iconfont {
+        width: 80rpx;
+        text-align: center;
+      }
+
+      .icon-xiangyou {
+        font-size: 28rpx;
+      }
+
+      .icon-jiahao2fill {
+        font-size: 42rpx;
+        color: rgba(0, 0, 0, .2);
+      }
+
+      .newaddress {
+        font-size: 32rpx;
+        width: 610rpx;
+        font-weight: 400;
+        padding-left: 10rpx;
+      }
+    }
+
+    .address_userress {
+      .newaddress {
+        .config {
+          display: flex;
+          align-items: center;
+
+          .config_name {
+            font-size: 32rpx;
+            font-weight: 500;
+          }
+
+          .config_phone {
+            font-size: 28rpx;
+            padding-left: 20rpx;
+          }
+
+        }
+      }
+
+      .address {
+        font-size: 28rpx;
+      }
+
+      .icon-dingwei1 {
+        font-size: 40rpx;
+      }
+    }
+
+    .goods_list {
+      border-radius: 18rpx;
+      width: 710rpx;
+      margin:  20rpx;
+      &:nth-child(1){
+        margin-top: 0;
+      }
+  
+      .list_item {
+        &:nth-child(1){
+          margin-top: 0;
+        }
+        border-radius: 15rpx;
+        background-color: #fff;
+        margin: 15rpx 0;
+        padding: 0 15rpx;
+        height: 280rpx;
+        width: 710rpx;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #e9ecf0;
+  
+        .item_checkbox {
+          width: 10%;
+          height: 100%;
+          line-height: 280rpx;
+  
+        }
+  
+        .icon-quan {
+          font-size: 46rpx;
+          color: #000;
+        }
+  
+        .icon-xuanzhong {
+          font-size: 46rpx;
+          color: @cartcolor;
+        }
+  
+        .item_img {
+          width: 35%;
+          height: 100%;
+          padding: 15rpx;
+          display: flex;
+          align-items: center;
+  
+          image {
+            width: 90%;
+            height: 240rpx;
+          }
+        }
+  
+        .item_config {
+          position: relative;
+          height: 100%;
+          box-sizing: border-box;
+          padding-left: 20rpx;
+          width: 55%;
+          box-sizing: border-box;
+          font-size: 28rpx;
+  
+          .config_top {
+            position: absolute;
+            top: 20rpx;
+          }
+  
+          .item_name {
+            font-size: 32rpx;
+            text-overflow: -o-ellipsis-lastline;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+          }
+  
+          .item_num {
+            padding-top: 20rpx;
+            display: flex;
+  
+            .item_lable {
+              padding-right: 20rpx;
+              font-size: 28rpx;
+            }
+  
+            .item_num_delete,
+            .icon-jia1,
+            .icon-jian1 {
+              display: inline-block;
+              width: 40rpx;
+              height: 40rpx;
+              background-color: rgba(0, 0, 0, .1);
+              border-radius: 4rpx;
+              text-align: center;
+              line-height: 40rpx;
+            }
+  
+            input {
+              width: 60rpx;
+              text-align: center;
+            }
+  
+          }
+  
+          .item_price {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            bottom: 50rpx;
+  
+            .price_price {
+              font-size: 30rpx;
+              color: @cartcolor;
+            }
+  
+            .price_delete {
+              padding-right: 40rpx;
+              font-size: 26rpx;
+              text-decoration: underline;
+              color: #ccc;
+            }
+          }
+        }
+  
+      }
+    }
+
+    .goods_settl {
+      background-color: #fff;
+      border-top: 1px solid #e9ecf0;
+      width: 750rpx;
+      height: 100rpx;
+      padding: 0 0 0 15rpx;
+      display: flex;
+      position: fixed;
+      bottom: 0;
+
+      .settl_left {
+        width: 225rpx;
+        font-size: 32rpx;
+        display: flex;
+        align-items: center;
+
+        .item_checkbox {
+          display: flex;
+          align-items: center;
+
+          .iconfont {
+            font-size: 46rpx;
+            padding-right: 10rpx;
+          }
+
+          .icon-quan {
+            color: #000;
+          }
+
+          .icon-xuanzhong {
+            color: @cartcolor;
+          }
+        }
+
+        .deleteALL {
+          padding-left: 40rpx;
+          font-size: 26rpx;
+          text-decoration: underline;
+          color: #ccc;
+        }
+      }
+
+      .settl_right {
+        width: 525rpx;
+        display: flex;
+
+        .settl_total {
+          width: 60%;
+          line-height: 100rpx;
+          text-align: right;
+          padding-right: 10rpx;
+          color: @cartcolor;
+
+          text {
+            color: #000;
+            padding-right: 8rpx;
+          }
+        }
+
+        .Settlement {
+          width: 40%;
+          line-height: 100rpx;
+          text-align: center;
+          color: #fff;
+          background-color: @cartcolor;
+        }
+      }
+    }
+  }
+}

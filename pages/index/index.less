@@ -1,0 +1,69 @@
+//轮播
+.index_swiper {
+  swiper {
+    width: 100%;
+    height: 340rpx;
+    image {
+      width: 100%;
+    }
+  }
+}
+
+//导航栏
+.option_cate {
+  display: flex;
+  navigator {
+    flex: 1;
+    padding: 20rpx;
+    image {
+      width: 100%;
+    }
+  }
+}
+
+//楼层
+.floor {
+
+  .floor_item {
+
+    .item_title {
+      width: 100%;
+
+      image {
+        width: 250rpx;
+        height: 416rpx;
+      }
+    }
+
+    .item_img {
+      width: 100%;
+      overflow: hidden;
+
+      navigator {
+        float: left;
+        width: 250rpx;
+        border-left: 10rpx solid #fff;
+
+        &:nth-child(1) {
+          border-left: none;
+        }
+
+        &:nth-child(2),
+        &:nth-child(3) {
+          border-bottom: 10rpx solid #fff;
+        }
+
+        &:nth-child(n+2) {
+          width: 250rpx;
+          height: 208rpx
+        }
+
+        image {
+          width: 250rpx;
+          height: 211rpx;
+        }
+
+      }
+    }
+  }
+}

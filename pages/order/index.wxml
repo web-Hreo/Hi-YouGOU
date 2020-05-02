@@ -1,0 +1,15 @@
+<!-- pages/order/index.wxml -->
+<Tabs tabsList="{{tabs}}" bindtabindex="settabindex">
+  <block wx:if="{{tabs[0].isActive}}">
+    <view class="item">暂无订单数据~~</view>
+  </block>
+  <block wx:elif="{{tabs[1].isActive}}">
+    <view class="item">暂无待付款订单~~</view>
+  </block>
+  <block wx:elif="{{tabs[2].isActive}}">
+    <view class="item">暂无待收货订单~~</view>
+  </block>
+  <block wx:else>
+    <view class="item">此APP不支持退换功能~~</view>
+  </block>
+</Tabs>

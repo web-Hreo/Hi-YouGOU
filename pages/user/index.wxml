@@ -1,0 +1,109 @@
+<view class="user">
+  <!-- 头像区域 -->
+  <view class="user_head">
+    <image class="user_background" src="{{userInfo.avatarUrl?userInfo.avatarUrl:'http://img1.imgtn.bdimg.com/it/u=2421033482,4116815793&fm=11&gp=0.jpg'}}" mode="widthFix" />
+    <view class="user_portrait_cont" wx:if="{{userInfo.length==0?true:false}}">
+      <button class="default" bindgetuserinfo="getUserInfo" hover-class="button-hover" open-type="getUserInfo">
+        微信登录
+      </button>
+    </view>
+    <view class="user_portrait_cont" wx:else>
+      <image class="user_portrait" src="{{userInfo.avatarUrl}}" />
+      <view class="user_name">{{userInfo.nickName}}</view>
+    </view>
+  </view>
+  <!-- 收藏店铺管理 -->
+  <view class="user_collection item_radius user_flex">
+    <view class="user_collection_shop user_collection_item">
+      <view class="user_collection_num">0</view>
+      <view class="user_collection_name">收藏的店铺</view>
+    </view>
+    <view class="user_collection_shop user_collection_item">
+      <view class="user_collection_num">0</view>
+      <view class="user_collection_name">收藏的商品</view>
+    </view>
+    <view class="user_collection_shop user_collection_item">
+      <view class="user_collection_num">0</view>
+      <view class="user_collection_name">关注的商品</view>
+    </view>
+    <view class="user_collection_shop user_collection_item">
+      <view class="user_collection_num">0</view>
+      <view class="user_collection_name">我的足迹</view>
+    </view>
+  </view>
+  <!-- 订单管理 -->
+  <view class="user_order item_radius">
+    <view class="order_titel">我的订单</view>
+    <view class="order_config user_flex">
+      <view class="order_config_shop order_config_item">
+        <navigator url="/pages/order/index?type=1" hover-class="navigator-hover" open-type="navigate">
+          <view class="order_config_icon">
+            <text class="iconfont icon-dingdan-" />
+          </view>
+          <view class="order_config_name">全部订单</view>
+        </navigator>
+      </view>
+      <view class="order_config_shop order_config_item">
+        <navigator url="/pages/order/index?type=2" hover-class="navigator-hover" open-type="navigate">
+          <view class="order_config_icon">
+            <text class="iconfont icon-zhuanzhang" />
+          </view>
+          <view class="order_config_name">待付款</view>
+        </navigator>
+      </view>
+      <view class="order_config_shop order_config_item">
+        <navigator url="/pages/order/index?type=3" hover-class="navigator-hover" open-type="navigate">
+          <view class="order_config_icon">
+            <text class="iconfont icon-wodedingdan2" />
+          </view>
+          <view class="order_config_name">待收货</view>
+        </navigator>
+      </view>
+      <view class="order_config_shop order_config_item">
+        <view class="order_config_icon">
+          <text class="iconfont icon-wodeshangjizhuanhuan" />
+        </view>
+        <view class="order_config_name">退货/退款</view>
+      </view>
+    </view>
+  </view>
+  <!-- 收货地址管理 -->
+  <view class="user_address item_radius user_flex">
+    <view class="user_address_modify">收货地址管理</view>
+    <view class="user_address_icon">
+      <text class="iconfont icon-xiangyou" />
+    </view>
+  </view>
+  <!-- 其他 -->
+  <view class="user_Other item_radius">
+    <view class="user_Other_item  user_flex">
+      <view class="user_Other_modify">联系客服</view>
+      <view class="user_Other_phone">400-6675-9932</view>
+    </view>
+    <view class="user_Other_item  user_flex">
+      <view class="user_Other_modify">意见反馈</view>
+      <view class="user_Other_icon">
+        <text class="iconfont icon-xiangyou" />
+      </view>
+    </view>
+    <view class="user_Other_item  user_flex">
+      <view class="user_Other_modify">关于我们</view>
+      <view class="user_Other_icon">
+        <text class="iconfont icon-xiangyou" />
+      </view>
+    </view>
+  </view>
+  <!-- 绑定手机号和退出登录 -->
+  <view class="user_admin  user_flex">
+    <view class="user_admin_modify">绑定手机设置</view>
+    <view class="user_admin_icon">
+      <text class="iconfont icon-xiangyou" />
+    </view>
+  </view>
+  <view class="user_outlogin  user_flex">
+    <view class="user_outlogin_modify">退出登录</view>
+    <view class="user_outlogin_icon">
+      <text class="iconfont icon-xiangyou" />
+    </view>
+  </view>
+</view>

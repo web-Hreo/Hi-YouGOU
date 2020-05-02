@@ -1,0 +1,125 @@
+@color: #00B26A;
+@cartcolor: #ff734c;
+.user{
+  width: 100%;
+  background-color: #f3efef;
+  padding-bottom: 20rpx;
+  position: relative;
+  .user_head{
+    width: 100%;
+    height: 550rpx;
+    position: relative;
+    overflow: hidden;
+    .user_background{
+      width: 750rpx;
+      height: 550rpx;
+      -webkit-filter: blur(5px); 
+      filter: blur(5px);
+    }
+    .user_portrait_cont{
+      width: 250rpx;
+      height: 200rpx;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      position: absolute;
+      top: 200rpx;
+      button{
+        width: 220rpx;
+        font-size: 28rpx;
+        margin:  65rpx 0;
+      }
+      .user_name{
+        padding-top: 20rpx;
+        color: #fff;
+      }
+      image{
+        width: 200rpx;
+        height: 200rpx;
+        border-radius: 50%;
+      }
+    }
+  }
+  .user_flex{
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  .item_radius{
+    background-color: #fff;
+    border-radius: 15rpx;
+    margin: 17rpx 15rpx;
+    padding: 15rpx;
+  }
+  .user_collection{
+    position: absolute;
+    top: 500rpx;
+    width: 722rpx;
+    
+    .user_collection_item{
+      flex: 1;
+      .user_collection_num{
+        color: @cartcolor;
+        padding: 4rpx 0;
+      }
+      .user_collection_name{
+        color: rgb(70, 69, 69);
+        padding: 4rpx 0;
+      }
+    }
+  }
+  .user_order{
+    margin-top: 100rpx;
+    .order_titel{
+      font-size: 32rpx;
+      line-height: 70rpx;
+      border-bottom: 1px solid #e6e3e3;
+    }
+    .order_config_item{
+      flex: 1;
+      .order_config_icon{
+        color: @cartcolor;
+        padding: 20rpx 0 10rpx 0;
+        .iconfont{
+          font-size: 40rpx;
+        }
+      }
+      .order_config_name{
+        font-size: 28rpx;
+        padding: 4rpx 0;
+      }
+    }
+
+  }
+  .user_address{
+    justify-content: space-between;
+    font-size: 32rpx;
+  }
+  .user_Other{
+    font-size: 32rpx;
+    .user_Other_item{
+      justify-content: space-between;
+      padding: 20rpx 0;
+      border-bottom: 1px solid #e6e3e3;
+      .user_Other_phone{
+        padding-right: 20rpx;
+        font-size: 26rpx;
+      }
+      &:nth-child(1){
+        padding-top: 0;
+      }
+      &:nth-child(3){
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+    }
+  } 
+  .user_admin,
+  .user_outlogin{
+    background-color: #fff;
+    margin: 17rpx 0;
+    padding: 15rpx 27rpx;
+    justify-content: space-between;
+    
+  }
+}

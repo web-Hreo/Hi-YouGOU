@@ -1,0 +1,276 @@
+@color: #00B26A;
+@cartcolor: #ff734c;
+
+.mycart {
+  width: 750rpx;
+  min-height: 100vh;
+  background-color: #f3efef;
+  color: #000;
+  padding: 1.5vh 0;
+
+  .HaveGoods {
+    width: 750rpx;
+    font-size: 30rpx;
+
+    .goods_address {
+    .address_add,
+    .address_userress {
+      background-color: #fff;
+      border-radius: 18rpx;
+      width: 710rpx;
+      margin: 0 20rpx;
+      height: 120rpx;
+      display: flex;
+      align-items: center;
+    }
+    .icon-jinggao--
+    {
+      display: inline-block;
+      width: 50rpx;
+      height: 50rpx;
+      background-color: @cartcolor;
+      border-radius: 50%;
+      line-height: 50rpx;
+    }
+    .icon1 {
+      text-align: center;
+      width: 100rpx;      
+      text{
+        display: inline-block;
+        width: 50rpx;
+        height: 50rpx;
+        background-color: @cartcolor;
+        border-radius: 50%;
+        line-height: 50rpx;
+      }
+    }
+    .icon2{
+      width: 60rpx;
+    }
+
+    .icon-xiangyou {
+      font-size: 28rpx;
+    }
+    .icon-dingwei,
+    .icon-gantanhao{
+      font-size: 34rpx;
+      color: #fff;
+    }
+
+    .icon-jiahao2fill {
+      font-size: 42rpx;
+      color: rgba(0, 0, 0, .2);
+    }
+
+    .newaddress {
+      font-size: 32rpx;
+      width: 610rpx;
+      font-weight: 400;
+      padding-left: 10rpx;
+    }
+  }
+
+  .address_userress {
+    
+    .newaddress {
+      .config {
+        display: flex;
+        align-items: center;
+
+        .config_name {
+          font-size: 32rpx;
+          font-weight: 500;
+        }
+
+        .config_phone {
+          font-size: 24rpx;
+          color: #9ea0a3;
+          padding-left: 20rpx;
+        }
+
+      }
+    }
+
+    .address {
+      font-size: 26rpx;
+    }
+
+    .icon-dingwei1 {
+      font-size: 40rpx;
+    }
+  }
+
+  .goods_list {
+    border-radius: 18rpx;
+    width: 710rpx;
+    margin:  20rpx;
+    &:nth-child(1){
+      margin-top: 0;
+    }
+
+    .list_item {
+      &:nth-child(1){
+        margin-top: 0;
+      }
+      border-radius: 15rpx;
+      background-color: #fff;
+      margin: 15rpx 0;
+      padding: 0 15rpx;
+      height: 280rpx;
+      width: 710rpx;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #e9ecf0;
+
+      .item_checkbox {
+        width: 10%;
+        height: 100%;
+        line-height: 280rpx;
+
+      }
+
+      .icon-quan {
+        font-size: 46rpx;
+        color: #000;
+      }
+
+      .icon-xuanzhong {
+        font-size: 46rpx;
+        color: @cartcolor;
+      }
+
+      .item_img {
+        width: 35%;
+        height: 100%;
+        padding: 15rpx;
+        display: flex;
+        align-items: center;
+
+        image {
+          width: 90%;
+          height: 240rpx;
+        }
+      }
+
+      .item_config {
+        position: relative;
+        height: 100%;
+        box-sizing: border-box;
+        padding-left: 20rpx;
+        width: 55%;
+        box-sizing: border-box;
+        font-size: 28rpx;
+
+        .config_top {
+          position: absolute;
+          top: 20rpx;
+        }
+
+        .item_name {
+          font-size: 32rpx;
+          text-overflow: -o-ellipsis-lastline;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          line-clamp: 2;
+          -webkit-box-orient: vertical;
+        }
+
+        .item_num {
+          padding-top: 20rpx;
+          display: flex;
+
+          .item_lable {
+            padding-right: 20rpx;
+            font-size: 28rpx;
+          }
+
+          .item_num_delete,
+          .icon-jia1,
+          .icon-jian1 {
+            display: inline-block;
+            width: 40rpx;
+            height: 40rpx;
+            background-color: rgba(0, 0, 0, .1);
+            border-radius: 4rpx;
+            text-align: center;
+            line-height: 40rpx;
+          }
+
+          input {
+            width: 60rpx;
+            text-align: center;
+          }
+
+        }
+
+        .item_price {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          position: absolute;
+          bottom: 50rpx;
+
+          .price_price {
+            font-size: 30rpx;
+            color: @cartcolor;
+          }
+
+          .price_delete {
+            padding-right: 40rpx;
+            font-size: 26rpx;
+            text-decoration: underline;
+            color: #ccc;
+          }
+        }
+      }
+
+    }
+  }
+  .goods_settl_cont{
+    background-color: #fff;
+    border-top: 1px solid #e9ecf0;
+    width: 750rpx;
+    position: fixed;
+    bottom: 0;
+  }
+  .goods_settl {
+    padding: 0 0 0 15rpx;
+    display: flex;
+    justify-content: flex-end;
+    height: 100rpx;
+    .settl_right {
+      width: 70%;
+      display: flex;
+      align-items: center;
+      .settl_totalnum{
+        width: 20%;
+        text-align: center;
+        color: #ccc;
+        font-size: 28rpx;
+      }
+      
+      .settl_totalprice {
+        width: 45%;
+        text-align: right;
+        padding-right: 10rpx;
+        color: @cartcolor;
+
+        text {
+          color: #000;
+          padding-right: 8rpx;
+        }
+      }
+
+      .Settlement {
+        width: 35%;
+        line-height: 100rpx;
+        text-align: center;
+        color: #fff;
+        background-color: @cartcolor;
+      }
+    }
+  }
+}
+}

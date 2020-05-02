@@ -1,0 +1,8 @@
+<view class="tabs_box ">
+  <view wx:for="{{tabsList}}" wx:key="id" class="tabs {{item.isActive?'active':''}}" bindtap="simitchange" data-index="{{index}}">
+    {{item.value}}
+  </view>
+</view>
+<view class="tabs_cont">
+  <slot></slot>
+</view>

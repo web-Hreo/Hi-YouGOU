@@ -1,0 +1,29 @@
+.tabs_item navigator {
+  width: 100%;
+  display: flex;
+}
+.tabs_item navigator .tabs_item_img {
+  flex: 3;
+}
+.tabs_item navigator .tabs_item_img image {
+  width: 100%;
+  padding: 15rpx;
+}
+.tabs_item navigator .tabs_item_config {
+  flex: 7;
+  padding: 20rpx;
+}
+.tabs_item navigator .tabs_item_config .config_name {
+  font-size: 30rpx;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.tabs_item navigator .tabs_item_config .config_price {
+  font-size: 32rpx;
+  padding-top: 20rpx;
+  color: red;
+}
